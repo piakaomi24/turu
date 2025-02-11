@@ -18,6 +18,8 @@ import NextLink from "next/link";
 import { Image } from "@heroui/react";
 import clsx from "clsx";
 
+import { ConnectButton } from '@rainbow-me/rainbowkit';
+
 import { siteConfig } from "@/config/site";
 import { ThemeSwitch } from "@/components/theme-switch";
 import {
@@ -66,16 +68,7 @@ export const Navbar = () => {
         justify="end"
       >
         <NavbarItem className="hidden md:flex">
-          <Button
-            isExternal
-            as={Link}
-            className="text-sm font-normal text-default-600 bg-default-100"
-            href={siteConfig.links.sponsor}
-            startContent={<HeartFilledIcon className="text-danger" />}
-            variant="flat"
-          >
-            Sponsor
-          </Button>
+          <ConnectButton />
         </NavbarItem>
       </NavbarContent>
 
