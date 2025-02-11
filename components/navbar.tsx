@@ -60,11 +60,11 @@ export const Navbar = () => {
               alt="turu"
               className="w-full object-cover h-[40px]"
               radius="none"
-              src="/logo.png"
+              src="/logo-2.png"
             />
           </NextLink>
         </NavbarBrand>
-        {/* <ul className="hidden lg:flex gap-4 justify-start ml-2">
+        <ul className="hidden lg:flex gap-4 justify-start ml-2">
           {siteConfig.navItems.map((item) => (
             <NavbarItem key={item.href}>
               <NextLink
@@ -79,7 +79,7 @@ export const Navbar = () => {
               </NextLink>
             </NavbarItem>
           ))}
-        </ul> */}
+        </ul>
       </NavbarContent>
 
       <NavbarContent
