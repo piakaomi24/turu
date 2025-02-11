@@ -125,15 +125,15 @@ export default function Home() {
             <div className="max-w-3xl mb-10 col-span-6">
               <p className="text-2xl font-medium mb-4">Selamat Datang di Turu - Better Sleep, Better Life!</p>
               <p className="text-sm mb-4">Tidur yang cukup bukan hanya kebutuhan, tetapi juga investasi untuk kesehatan dan produktivitas Anda. Di Turu, kami membawa pengalaman tidur ke level baru dengan teknologi Web3. Dapatkan imbalan hanya dengan tidur yang cukup dan nikmati manfaat tidur berkualitas setiap malam!</p>
-              <div key="primary1" className="w-full flex items-center my-3">
-                <Alert hideIcon color="primary" title="Beli NFT Anda untuk memulai perjalanan tidur yang lebih baik" />
+              {/* <div key="primary1" className="w-full flex items-center my-3">
+                <Alert hideIcon color="primary" title="Step 1 - Beli NFT Untuk Mulai" description="Beli NFT Anda untuk memulai perjalanan tidur yang lebih baik" />
               </div>
               <div key="primary2" className="w-full flex items-center my-3">
-                <Alert hideIcon color="primary" title="Tidur dengan cukup dan biarkan sistem bekerja untuk Anda" />
+                <Alert hideIcon color="primary" title="Step 2 - Tidur Dengan Baik" description="Tidur dengan cukup dan biarkan sistem bekerja untuk Anda" />
               </div>
               <div key="primary3" className="w-full flex items-center my-3">
-                <Alert hideIcon color="primary" title=" Dapatkan imbalan karena tubuh dan pikiran Anda beristirahat dengan optimal" />
-              </div>
+                <Alert hideIcon color="primary" title="Step 3 - Dapatkan Imbalan" description=" Dapatkan imbalan karena tubuh dan pikiran Anda beristirahat dengan optimal" />
+              </div> */}
               <p className="text-sm mb-4 mt-5 font-bold text-primary">Siap untuk tidur lebih nyenyak dan mendapatkan imbalan?</p>
               <Button color="primary" variant="shadow" className="px-10">Gabung Sekarang</Button>
             </div>
