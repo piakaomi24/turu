@@ -71,9 +71,9 @@ export default function Home() {
         </div>
         <div className="max-w-6xl h-full py-8 md:py-10 mx-auto relative">
           <div className="max-w-3xl mb-10">
-            <p className="text-2xl font-medium"><span className="text-primary font-bold">Turu</span> NFT Marketplace</p>
+            <p className="text-2xl font-medium"><span className="text-primary font-bold">TURU</span> NFT Marketplace</p>
             <p className="text-1xl mb-4 text-primary">Dapatkan NFT Eksklusif & Mulai Menghasilkan Imbalan dari Tidur Anda</p>
-            <p className="text-slate-500">Selamat datang di marketplace resmi Turu! Di sini, Anda bisa membeli NFT yang akan membuka akses ke fitur eksklusif dan imbalan berbasis kualitas tidur. Pilih NFT yang sesuai dengan gaya tidur Anda dan mulai perjalanan menuju tidur yang lebih sehat dan produktif!</p>
+            <p className="text-slate-500 text-sm">Selamat datang di marketplace resmi Turu! Di sini, Anda bisa membeli NFT yang akan membuka akses ke fitur eksklusif dan imbalan berbasis kualitas tidur. Pilih NFT yang sesuai dengan gaya tidur Anda dan mulai perjalanan menuju tidur yang lebih sehat dan produktif!</p>
           </div>
           <div className="gap-4 grid grid-cols-2 sm:grid-cols-5 w-full">
             {list.map((item, index) => (
