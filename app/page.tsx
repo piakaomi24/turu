@@ -123,7 +123,7 @@ export default function Home() {
         <div className="max-w-6xl h-full py-8 md:py-10 mx-auto relative">
           <div className="grid grid-cols-12">
             <div className="flex flex-col justify-center col-span-6">
-              <p className="text-2xl font-medium mb-4">Selamat Datang di Turu - Better Sleep, Better Life!</p>
+              <p className="text-2xl font-medium mb-4"><span className="text-primary">Selamat Datang di Turu</span> - Better Sleep, Better Life!</p>
               <p className="text-sm mb-4">Tidur yang cukup bukan hanya kebutuhan, tetapi juga investasi untuk kesehatan dan produktivitas Anda. Di Turu, kami membawa pengalaman tidur ke level baru dengan teknologi Web3. Dapatkan imbalan hanya dengan tidur yang cukup dan nikmati manfaat tidur berkualitas setiap malam!</p>
               {/* <div key="primary1" className="w-full flex items-center my-3">
                 <Alert hideIcon color="primary" title="Step 1 - Beli NFT Untuk Mulai" description="Beli NFT Anda untuk memulai perjalanan tidur yang lebih baik" />
