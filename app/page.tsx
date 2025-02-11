@@ -58,13 +58,12 @@ export default function Home() {
 
               <div className="flex gap-3 justify-center mt-5">
                 <Link
-                  isExternal
                   className={buttonStyles({
                     color: "primary",
                     radius: "full",
                     variant: "shadow",
-                  })}
-                  href={siteConfig.links.docs}
+                  }) + " px-7"}
+                  href="statistics"
                 >
                   Bergabung Sekarang
                 </Link>
