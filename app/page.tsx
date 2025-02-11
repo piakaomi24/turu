@@ -122,7 +122,7 @@ export default function Home() {
       <section className="relative overflow-hidden">
         <div className="max-w-6xl h-full py-8 md:py-10 mx-auto relative">
           <div className="grid grid-cols-12">
-            <div className="max-w-3xl mb-10 col-span-6">
+            <div className="flex flex-col justify-center col-span-6">
               <p className="text-2xl font-medium mb-4">Selamat Datang di Turu - Better Sleep, Better Life!</p>
               <p className="text-sm mb-4">Tidur yang cukup bukan hanya kebutuhan, tetapi juga investasi untuk kesehatan dan produktivitas Anda. Di Turu, kami membawa pengalaman tidur ke level baru dengan teknologi Web3. Dapatkan imbalan hanya dengan tidur yang cukup dan nikmati manfaat tidur berkualitas setiap malam!</p>
               {/* <div key="primary1" className="w-full flex items-center my-3">
@@ -135,9 +135,15 @@ export default function Home() {
                 <Alert hideIcon color="primary" title="Step 3 - Dapatkan Imbalan" description=" Dapatkan imbalan karena tubuh dan pikiran Anda beristirahat dengan optimal" />
               </div> */}
               <p className="text-sm mb-4 mt-5 font-bold text-primary">Siap untuk tidur lebih nyenyak dan mendapatkan imbalan?</p>
-              <Button color="primary" variant="shadow" className="px-10">Gabung Sekarang</Button>
+              <Button color="primary" variant="shadow" className="px-10 w-fit">Gabung Sekarang</Button>
             </div>
-            <div className="flex items-start justify-end col-span-5 col-start-8">              
+            <div className="flex items-center col-span-5 col-start-8">
+              <Image
+                alt="turu"
+                className="w-full"
+                radius="lg"
+                src="/images/illustration-1.jpg"
+              />
             </div>
           </div>
         </div>
