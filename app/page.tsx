@@ -92,7 +92,7 @@ export default function Home() {
           <div className="gap-4 grid grid-cols-2 sm:grid-cols-5 w-full">
             {list.map((item, index) => (
               /* eslint-disable no-console */
-              <Card key={index} isPressable shadow="sm" onPress={() => console.log("item pressed")}>
+              <Card key={index} shadow="sm" onPress={() => console.log("item pressed")}>
                 <CardBody className="overflow-visible p-0">
                   <Image
                     alt={item.title}
@@ -141,7 +141,7 @@ export default function Home() {
                 alt="turu"
                 className="w-full"
                 radius="lg"
-                src="/images/illustration-1.jpg"
+                src="/images/illustration-1-edit.jpg"
               />
             </div>
           </div>
