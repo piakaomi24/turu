@@ -182,6 +182,7 @@ export default function Home() {
       </section>
 
       <section className="relative overflow-hidden z-10 bg-primary">
+        <div className="absolute inset-0 h-full w-full items-center px-5 py-24 [background:radial-gradient(125%_125%_at_50%_10%,#2667FF_40%,#3B28CC_100%)]"></div>
         <div className="absolute top-0 h-full w-full">
           <div className="absolute left-0 top-0 h-[500px] w-[500px] -translate-x-[30%] translate-y-[20%] rounded-full bg-[#3F8EFC] blur-[80px]"></div>
           <div className="absolute right-0 bottom-0 h-[400px] w-[400px] translate-y-[200px] rounded-full bg-[#3F8EFC] blur-[80px]"></div>
