@@ -265,7 +265,12 @@ export default function Home() {
       </section>
 
       <section className="relative overflow-hidden">
-        <div className="max-w-6xl h-full py-8 md:py-24 mx-auto relative">
+        <div className="absolute inset-0 h-full w-full items-center px-5 py-24 [background:radial-gradient(125%_125%_at_50%_10%,#FFF_40%,rgba(38,103,255,.5)_100%)]"></div>
+        <div className="absolute top-0 h-full w-full">
+          <div className="absolute left-0 top-0 h-[200px] w-[200px] -translate-x-[30%] translate-y-[50%] rounded-full bg-[#3F8EFC] blur-[80px] opacity-20"></div>
+          <div className="absolute right-0 bottom-0 h-[400px] w-[400px] translate-y-[200px] rounded-full bg-[#3F8EFC] blur-[80px] opacity-20"></div>
+        </div>
+        <div className="max-w-6xl h-full py-8 md:py-24 md:pb-44 mx-auto relative">
           <p className="text-2xl font-medium mb-4 text-center"><span className="text-primary">Platform TURU</span> Techstack</p>
           <div className="gap-4 flex flex-wrap w-full justify-center">
             {tech.map((item, index) => (
