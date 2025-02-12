@@ -16,6 +16,18 @@ export const siteConfig = {
       label: "Statistics",
       href: "/statistics",
     },
+    {
+      label: "How to Earn",
+      href: "/how-to-earn",
+    },
+    {
+      label: "Whitepaper",
+      href: "/whitepaper",
+    },
+    {
+      label: "FAQ",
+      href: "/faq",
+    },
   ],
   navMenuItems: [
     {
