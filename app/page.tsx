@@ -3,8 +3,6 @@
 import { Link } from "@heroui/link";
 import { button as buttonStyles } from "@heroui/theme";
 import { Card, CardHeader, CardBody, CardFooter, Image, Button, Alert } from "@heroui/react";
-import Swiper from "swiper/bundle";
-import 'swiper/css/bundle';
 
 export default function Home() {
   const list = [
