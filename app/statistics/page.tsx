@@ -77,7 +77,7 @@ export default function Home() {
                 </CardBody>
                 <CardFooter className="px-6">
                   <Link isExternal showAnchorIcon href="#" className="text-sm">
-                    Pelajari tipe tidur Anda
+                    Pelajari apa itu RHR
                   </Link>
                 </CardFooter>
               </Card>
