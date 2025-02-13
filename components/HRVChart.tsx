@@ -15,7 +15,7 @@ const HRVChart = () => {
             curve: "smooth",
         },
         xaxis: {
-            categories: ["Senin", "Selasa", "Rabu", "Kamis", "Jumat", "Sabtu", "Minggu"],
+            categories: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
         },
         markers: {
             size: 5,
