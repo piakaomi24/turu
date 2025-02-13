@@ -23,12 +23,12 @@ export const Footer = () => {
             />
           </div>
           <div className="col-span-4">
-            <p className="text-2xl text-white mb-6">Tentang</p>
+            <p className="text-2xl text-white mb-6">About</p>
             <p className="text-sm text-white opacity-75 mb-4">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Autem quo aliquid incidunt sed sint consequatur nesciunt nisi laborum perspiciatis provident.</p>
             <p className="text-sm text-white opacity-75">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Autem quo aliquid incidunt sed sint consequatur nesciunt nisi laborum perspiciatis provident.</p>
           </div>
           <div className="col-span-2 col-start-9">
-            <p className="text-2xl text-white mb-6">Navigasi</p>
+            <p className="text-2xl text-white mb-6">Navigation</p>
             <ul>
               <li className="pb-1"><Link href="#" className="text-sm text-white opacity-75 hover:opacity-100">Home</Link></li>
               <li className="pb-1"><Link href="#" className="text-sm text-white opacity-75 hover:opacity-100">Shop</Link></li>

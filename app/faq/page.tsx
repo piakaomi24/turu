@@ -4,8 +4,6 @@ import { Accordion, AccordionItem } from "@heroui/react";
 import { Breadcrumbs, BreadcrumbItem } from "@heroui/react";
 
 export default function Home() {
-  const defaultContent = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.";
-
   return (
     <div>
       <section className="bg-slate-100">
@@ -23,43 +21,43 @@ export default function Home() {
         </div>
         <div className="max-w-6xl h-full py-8 md:py-20 mx-auto relative">
           <div className="max-w-3xl mb-10">
-            <p className="text-2xl font-medium">Pertanyaan yang Sering Diajukan (FAQ)</p>
+            <p className="text-2xl font-medium">Frequently Asked Question (FAQ)</p>
           </div>
           <div className="max-w-3xl">
             <Accordion variant="splitted">
-              <AccordionItem key="1" aria-label="Accordion 1" title="Apa itu Turu?" className="font-medium">
+              <AccordionItem key="1" aria-label="Accordion 1" title="What is Turu?" className="font-medium">
                 <div className="text-slate-500 text-sm">
-                  <p>Turu adalah platform Web3 yang memberi Anda imbalan hanya dengan tidur yang cukup dan berkualitas. Dengan membeli NFT, Anda dapat mulai mendapatkan reward setiap malam saat Anda tidur.</p>
+                  <p>Turu is a Web3 platform that rewards you simply for getting enough and quality sleep. By purchasing an NFT, you can start earning rewards every night as you sleep.</p>
                 </div>
               </AccordionItem>
-              <AccordionItem key="2" aria-label="Accordion 1" title="Bagaimana cara kerja Turu?" className="font-medium">
+              <AccordionItem key="2" aria-label="Accordion 1" title="How does Turu work?" className="font-medium">
                 <div className="text-slate-500 text-sm">
-                  <p>Setelah membeli NFT, Anda hanya perlu tidur dengan cukup dan membiarkan aplikasi Turu melacak durasi serta kualitas tidur Anda. Semakin baik tidur Anda, semakin banyak imbalan yang Anda dapatkan!</p>
+                  <p>After purchasing an NFT, all you need to do is get enough sleep and let the Turu app track the duration and quality of your sleep. The better your sleep, the more rewards you’ll earn!</p>
                 </div>
               </AccordionItem>
-              <AccordionItem key="3" aria-label="Accordion 1" title="Apakah saya perlu memiliki NFT untuk mendapatkan imbalan?" className="font-medium">
+              <AccordionItem key="3" aria-label="Accordion 1" title="Do I need to own an NFT to earn rewards?" className="font-medium">
                 <div className="text-slate-500 text-sm">
-                  <p>Ya, memiliki NFT adalah syarat utama untuk bisa mengakses sistem reward di Turu. NFT ini berfungsi sebagai tiket masuk ke ekosistem imbalan berbasis blockchain kami.</p>
+                  <p>Yes, owning an NFT is a key requirement to access the reward system on Turu. This NFT acts as your entry ticket to our blockchain-based reward ecosystem.</p>
                 </div>
               </AccordionItem>
-              <AccordionItem key="4" aria-label="Accordion 1" title="Apa saja jenis imbalan yang bisa saya dapatkan?" className="font-medium">
+              <AccordionItem key="4" aria-label="Accordion 1" title="What types of rewards can I earn?" className="font-medium">
                 <div className="text-slate-500 text-sm">
-                  <p>Anda bisa mendapatkan token kripto, NFT tambahan, akses ke fitur eksklusif, serta berbagai keuntungan lainnya sesuai dengan tingkat kualitas tidur Anda.</p>
+                  <p>You can earn cryptocurrency tokens, additional NFTs, access to exclusive features, and various other benefits based on the quality of your sleep.</p>
                 </div>
               </AccordionItem>
-              <AccordionItem key="5" aria-label="Accordion 1" title="Bagaimana cara membeli NFT di Turu?" className="font-medium">
+              <AccordionItem key="5" aria-label="Accordion 1" title="How can I buy an NFT on Turu?" className="font-medium">
                 <div className="text-slate-500 text-sm">
-                  <p>Anda bisa membeli NFT langsung melalui halaman [Shop] di website kami menggunakan mata uang kripto yang didukung. Cukup hubungkan wallet Anda dan lakukan pembelian dengan mudah.</p>
+                  <p>You can purchase NFTs directly from the [Shop] page on our website using supported cryptocurrencies. Simply connect your wallet and complete your purchase with ease.</p>
                 </div>
               </AccordionItem>
-              <AccordionItem key="6" aria-label="Accordion 1" title="Apakah aplikasi Turu mendukung semua jenis perangkat?" className="font-medium">
+              <AccordionItem key="6" aria-label="Accordion 1" title="Does the Turu app support all device types?" className="font-medium">
                 <div className="text-slate-500 text-sm">
-                  <p>Saat ini, Turu tersedia untuk perangkat iOS dan Android, serta dapat diakses melalui browser untuk memantau progress Anda.</p>
+                  <p>Turu is currently available for iOS and Android devices and can also be accessed through a browser to track your progress.</p>
                 </div>
               </AccordionItem>
-              <AccordionItem key="7" aria-label="Accordion 1" title="Apakah data tidur saya aman?" className="font-medium">
+              <AccordionItem key="7" aria-label="Accordion 1" title="Is my sleep data secure?" className="font-medium">
                 <div className="text-slate-500 text-sm">
-                  <p>Keamanan adalah prioritas kami. Semua data tidur Anda dienkripsi dan hanya digunakan untuk melacak progres serta menghitung reward Anda. Kami tidak membagikan data Anda kepada pihak ketiga.</p>
+                  <p>Security is our priority. All your sleep data is encrypted and used only to track your progress and calculate your rewards. We do not share your data with third parties.</p>
                 </div>
               </AccordionItem>
             </Accordion>

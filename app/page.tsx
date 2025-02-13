@@ -94,7 +94,7 @@ export default function Home() {
                   />
                 </div>
                 <div className="mt-4 text-sm text-slate-500">
-                  <span className="text-primary font-medium">Selamat datang di Turu</span> - platform Web3 yang memberi imbalan untuk tidur yang tercukupi. Tidur yang berkualitas bukan hanya meningkatkan produktivitas, tetapi juga kesehatan mental dan fisik Anda. Bergabunglah dengan kami untuk mendapatkan manfaat tidur yang lebih baik dan imbalan eksklusif melalui NFT!
+                  <span className="text-primary font-medium">Welcome to Turu</span> - A Web3 platform that rewards you for getting sufficient sleep. Quality sleep not only boosts productivity but also improves your mental and physical health. Join us to enjoy the benefits of better sleep and exclusive rewards through NFTs!
                 </div>
               </div>
 
@@ -124,10 +124,10 @@ export default function Home() {
           <div className="grid grid-cols-2">
             <div className="max-w-3xl mb-10">
               <p className="text-2xl font-medium"><span className="text-primary font-bold">TURU</span> NFT Marketplace</p>
-              <p className="text-1xl mb-4 text-primary">Dapatkan NFT Eksklusif & Mulai Menghasilkan Imbalan dari Tidur Anda</p>
+              <p className="text-1xl mb-4 text-primary">Get Exclusive NFTs & Start Earning Rewards from Your Sleep!</p>
             </div>
             <div className="flex justify-end">
-              <Link href="shop">Lihat Lainnya</Link>
+              <Link href="shop">See More NFT</Link>
             </div>
           </div>
           <div className="gap-4 grid grid-cols-2 sm:grid-cols-5 w-full">
@@ -162,10 +162,10 @@ export default function Home() {
         <div className="max-w-6xl h-full py-8 md:py-20 mx-auto relative">
           <div className="grid grid-cols-12">
             <div className="flex flex-col justify-center col-span-6">
-              <p className="text-2xl font-medium mb-4"><span className="text-primary">Selamat Datang di Turu</span> - Better Sleep, Better Life!</p>
-              <p className="text-sm mb-4 text-slate-500">Tidur yang cukup bukan hanya kebutuhan, tetapi juga investasi untuk kesehatan dan produktivitas Anda. Di Turu, kami membawa pengalaman tidur ke level baru dengan teknologi Web3. Dapatkan imbalan hanya dengan tidur yang cukup dan nikmati manfaat tidur berkualitas setiap malam!</p>
-              <p className="text-sm mb-4 mt-5 font-bold text-primary">Siap untuk tidur lebih nyenyak dan mendapatkan imbalan?</p>
-              <Button color="primary" variant="shadow" className="px-10 w-fit">Gabung Sekarang</Button>
+              <p className="text-2xl font-medium mb-4"><span className="text-primary">Welcome to Turu</span> - Better Sleep, Better Life!</p>
+              <p className="text-sm mb-4 text-slate-500">Getting enough sleep is not just a need, but an investment in your health and productivity. At Turu, we take your sleep experience to the next level with Web3 technology. Earn rewards simply by getting enough sleep and enjoy the benefits of quality rest every night!</p>
+              <p className="text-sm mb-4 mt-5 font-bold text-primary">Ready to sleep better and earn rewards?</p>
+              <Button color="primary" variant="shadow" className="px-10 w-fit">Join Now</Button>
             </div>
             <div className="flex items-center col-span-5 col-start-8">
               <Image
@@ -189,36 +189,36 @@ export default function Home() {
         <div className="max-w-6xl h-full py-8 md:py-24 mx-auto relative">
           <div className="flex justify-center">
             <div className="max-w-2xl mb-14">
-              <p className="text-2xl font-medium text-center text-white">Penggunaan <span className="font-bold">TURU</span></p>
-              <p className="text-1xl text-center text-white opacity-75">Mulai perjalanan tidur sehat Anda dan raih imbalan yang nyata dengan mengikuti tiga langkah mudah berikut ini:</p>
+              <p className="text-2xl font-medium text-center text-white">Usage of <span className="font-bold">TURU</span></p>
+              <p className="text-1xl text-center text-white opacity-75">Start your journey to better sleep and earn real rewards by following these three simple steps:</p>
             </div>
           </div>
           <div className="gap-4 grid grid-cols-1 sm:grid-cols-3 w-full">
             <Card className="py-4 bg-[rgba(255,255,255,.25)]">
               <CardHeader className="pb-0 pt-2 px-4 flex-col items-start">
                 <p className="text-tiny uppercase font-bold text-white opacity-75">Step 1</p>
-                <h4 className="font-bold text-large text-white">Beli NFT Untuk Mulai</h4>
+                <h4 className="font-bold text-large text-white">Buy an NFT to Get Started.</h4>
               </CardHeader>
               <CardBody className="overflow-visible py-2 px-4">
-                <p className="text-white text-sm">Pilih NFT yang sesuai dengan kebutuhan tidur Anda. Setiap NFT memberi Anda akses ke fitur premium dan imbalan eksklusif.</p>
+                <p className="text-white text-sm">Choose an NFT that fits your sleep needs. Each NFT gives you access to premium features and exclusive rewards.</p>
               </CardBody>
             </Card>
             <Card className="py-4 bg-[rgba(255,255,255,.25)]">
               <CardHeader className="pb-0 pt-2 px-4 flex-col items-start">
                 <p className="text-tiny uppercase font-bold text-white opacity-75">Step 2</p>
-                <h4 className="font-bold text-large text-white">Tidur Dengan Cukup</h4>
+                <h4 className="font-bold text-large text-white">Get Enough Sleep.</h4>
               </CardHeader>
               <CardBody className="overflow-visible py-2 px-4">
-                <p className="text-white text-sm">Gunakan aplikasi Turu untuk melacak kualitas tidur Anda. Tidur yang cukup dan berkualitas membuka peluang untuk mendapatkan lebih banyak imbalan.</p>
+                <p className="text-white text-sm">Use the Turu app to track the quality of your sleep. Getting enough quality sleep opens up opportunities to earn more rewards.</p>
               </CardBody>
             </Card>
             <Card className="py-4 bg-[rgba(255,255,255,.25)]">
               <CardHeader className="pb-0 pt-2 px-4 flex-col items-start">
                 <p className="text-tiny uppercase font-bold text-white opacity-75">Step 3</p>
-                <h4 className="font-bold text-large text-white">Dapatkan Imbalan</h4>
+                <h4 className="font-bold text-large text-white">Earn Rewards.</h4>
               </CardHeader>
               <CardBody className="overflow-visible py-2 px-4">
-                <p className="text-white text-sm">Semakin baik kualitas tidur Anda, semakin banyak imbalan yang bisa Anda dapatkan, termasuk NFT tambahan dan fitur eksklusif lainnya.</p>
+                <p className="text-white text-sm">The better the quality of your sleep, the more rewards you can earn, including additional NFTs and other exclusive features.</p>
               </CardBody>
             </Card>
           </div>
@@ -231,9 +231,9 @@ export default function Home() {
           <div className="gap-2 grid grid-cols-8 w-full">
             <div className="col-span-4 col-start-3  ">
               <div className="text-center justify-center">
-                <p className="text-2xl font-medium mb-2 text-center">Saatnya Tidur Berkualitas dan <span className="text-primary">Mendapatkan Imbalan!</span></p>
+                <p className="text-2xl font-medium mb-2 text-center">It's Time for Quality Sleep <span className="text-primary">and Earning Rewards!</span></p>
                 <div className="text-sm text-slate-500 mb-5">
-                  Ambil langkah pertama untuk tidur yang lebih nyenyak dan dapatkan keuntungan dengan setiap tiduran Anda!
+                  Take the first step towards better sleep and earn rewards with every restful night!
                 </div>
                 <div className="flex gap-3 justify-center mb-10">
                   <Link
@@ -244,7 +244,7 @@ export default function Home() {
                     }) + " px-7"}
                     href="statistics"
                   >
-                    Gabung dan Dapatkan NFT Anda
+                    Join and Get Your NFT!
                   </Link>
                 </div>
                 <div className="flex justify-center mb-6">
@@ -269,7 +269,7 @@ export default function Home() {
           <div className="absolute right-0 bottom-0 h-[400px] w-[400px] translate-y-[200px] rounded-full bg-[#3F8EFC] blur-[80px] opacity-20"></div>
         </div>
         <div className="max-w-6xl h-full py-8 md:py-24 md:pb-44 mx-auto relative">
-          <p className="text-2xl font-medium mb-4 text-center"><span className="text-primary">Platform TURU</span> Techstack</p>
+          <p className="text-2xl font-medium mb-4 text-center"><span className="text-primary">TURU</span> Techstack</p>
           <div className="gap-4 flex flex-wrap w-full justify-center">
             {tech.map((item, index) => (
               <div key={index} className="p-4 opacity-30 hover:opacity-100 grayscale hover:grayscale-0 transition-all">

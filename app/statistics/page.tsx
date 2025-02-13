@@ -24,7 +24,7 @@ export default function Home() {
         </div>
         <div className="max-w-6xl h-full py-8 md:py-20 mx-auto relative">
           <div className="max-w-3xl mb-10">
-            <p className="text-2xl font-medium">Statistics <span className="text-primary font-bold">TURU</span> Anda</p>
+            <p className="text-2xl font-medium">Your <span className="text-primary font-bold">TURU</span> Statistics</p>
             <p className="text-1xl mb-4 text-primary">Lorem, ipsum dolor sit amet consectetur adipisicing.</p>
           </div>
           <div className="grid grid-cols-12">
@@ -32,7 +32,7 @@ export default function Home() {
               <Card className="shadow-sm backdrop-blur-md bg-[rgba(255,255,255,.5)] h-full">
                 <CardHeader className="px-6">
                   <div className="flex flex-col">
-                    <p className="text-md font-medium text-primary">Tidur Anda Hari Ini</p>
+                    <p className="text-md font-medium text-primary">Today Sleep</p>
                     <p className="text-sm text-slate-500">Lorem ipsum dolor sit amet.</p>
                   </div>
                 </CardHeader>
@@ -41,7 +41,7 @@ export default function Home() {
                 </CardBody>
                 <CardFooter className="px-6">
                   <Link isExternal showAnchorIcon href="#" className="text-sm">
-                    Pelajari tipe tidur Anda
+                    Learn About Your Sleep Type
                   </Link>
                 </CardFooter>
               </Card>
@@ -59,7 +59,7 @@ export default function Home() {
                 </CardBody>
                 <CardFooter className="px-6">
                   <Link isExternal showAnchorIcon href="#" className="text-sm">
-                    Pelajari apa itu HRV
+                    Learn What HRV Is
                   </Link>
                 </CardFooter>
               </Card>
@@ -77,7 +77,7 @@ export default function Home() {
                 </CardBody>
                 <CardFooter className="px-6">
                   <Link isExternal showAnchorIcon href="#" className="text-sm">
-                    Pelajari apa itu RHR
+                    Learn What RHR Is
                   </Link>
                 </CardFooter>
               </Card>
