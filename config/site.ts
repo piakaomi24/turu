@@ -22,7 +22,7 @@ export const siteConfig = {
     },
     {
       label: "Whitepaper",
-      href: "/whitepaper",
+      href: "https://pugars-organization.gitbook.io/whitepaper-turu",
     },
     {
       label: "FAQ",
