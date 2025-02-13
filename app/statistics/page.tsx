@@ -3,6 +3,7 @@
 import { Card, CardHeader, CardBody, CardFooter, Link } from "@heroui/react";
 import { Breadcrumbs, BreadcrumbItem } from "@heroui/react";
 import SleepChart from "@/components/SleepChart";
+import SleepTimelineChart from "@/components/SleepTimelineChart";
 import HRVChart from "@/components/HRVChart";
 import RHRChart from "@/components/RHRChart";
 
@@ -27,7 +28,7 @@ export default function Home() {
             <p className="text-2xl font-medium">Your <span className="text-primary font-bold">TURU</span> Statistics</p>
             <p className="text-1xl mb-4 text-primary">Lorem, ipsum dolor sit amet consectetur adipisicing.</p>
           </div>
-          <div className="grid grid-cols-12">
+          <div className="grid grid-cols-12 gap-4">
             <div className="col-span-4">
               <Card className="shadow-sm backdrop-blur-md bg-[rgba(255,255,255,.5)] h-full">
                 <CardHeader className="px-6">
@@ -46,7 +47,41 @@ export default function Home() {
                 </CardFooter>
               </Card>
             </div>
-            <div className="col-span-4">
+            <div className="col-span-3">
+              <Card className="shadow-sm backdrop-blur-md bg-[rgba(255,255,255,.5)] h-full">
+                <CardBody className="px-6">
+                  <div className="flex flex-col mb-6">
+                    <p className="text-md font-medium text-primary">You Sleep At</p>
+                    <p className="text-sm text-slate-500 mb-2">Lorem ipsum dolor sit amet.</p>
+                    <p className="text-4xl font-bold text-slate-600">22.00</p>
+                  </div>
+                  <div className="flex flex-col mb-6">
+                    <p className="text-md font-medium text-primary">You Wake Up At</p>
+                    <p className="text-sm text-slate-500 mb-2">Lorem ipsum dolor sit amet.</p>
+                    <p className="text-4xl font-bold text-slate-600">06.00</p>
+                  </div>
+                  <div className="flex flex-col">
+                    <p className="text-md font-medium text-primary">Your Sleep Duration</p>
+                    <p className="text-sm text-slate-500 mb-2">Lorem ipsum dolor sit amet.</p>
+                    <p className="text-4xl font-bold text-slate-600">8 <span className="font-medium">Hours</span></p>
+                  </div>
+                </CardBody>
+              </Card>
+            </div>
+            <div className="col-span-5">
+              <Card className="shadow-sm backdrop-blur-md bg-[rgba(255,255,255,.5)] h-full">
+                <CardHeader className="px-6">
+                  <div className="flex flex-col">
+                    <p className="text-md font-medium text-primary">Your Sleep Timeline</p>
+                    <p className="text-sm text-slate-500">Lorem ipsum dolor sit amet.</p>
+                  </div>
+                </CardHeader>
+                <CardBody className="px-6">
+                  <SleepTimelineChart />
+                </CardBody>
+              </Card>
+            </div>
+            <div className="col-span-6">
               <Card className="shadow-sm backdrop-blur-md bg-[rgba(255,255,255,.5)] h-full">
                 <CardHeader className="px-6">
                   <div className="flex flex-col">
@@ -64,7 +99,7 @@ export default function Home() {
                 </CardFooter>
               </Card>
             </div>
-            <div className="col-span-4">
+            <div className="col-span-6">
               <Card className="shadow-sm backdrop-blur-md bg-[rgba(255,255,255,.5)] h-full">
                 <CardHeader className="px-6">
                   <div className="flex flex-col">
