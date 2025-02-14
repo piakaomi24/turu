@@ -31,36 +31,28 @@ export const siteConfig = {
   ],
   navMenuItems: [
     {
-      label: "Profile",
-      href: "/profile",
+      label: "Home",
+      href: "/",
     },
     {
-      label: "Dashboard",
-      href: "/dashboard",
+      label: "Shop",
+      href: "/shop",
+    },    
+    {
+      label: "Statistics",
+      href: "/statistics",
     },
     {
-      label: "Projects",
-      href: "/projects",
+      label: "How to Earn",
+      href: "/how-to-earn",
     },
     {
-      label: "Team",
-      href: "/team",
+      label: "Whitepaper",
+      href: "https://pugars-organization.gitbook.io/whitepaper-turu",
     },
     {
-      label: "Calendar",
-      href: "/calendar",
-    },
-    {
-      label: "Settings",
-      href: "/settings",
-    },
-    {
-      label: "Help & Feedback",
-      href: "/help-feedback",
-    },
-    {
-      label: "Logout",
-      href: "/logout",
+      label: "FAQ",
+      href: "/faq",
     },
   ],
   links: {

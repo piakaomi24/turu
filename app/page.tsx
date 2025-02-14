@@ -82,12 +82,12 @@ export default function Home() {
         <div className="absolute bottom-0 left-0 right-0 top-0 bg-[linear-gradient(to_right,rgba(38,103,255,.05)_2px,transparent_2px),linear-gradient(to_bottom,rgba(38,103,255,.05)_2px,transparent_2px)] bg-[size:24px_24px] [mask-image:radial-gradient(ellipse_80%_50%_at_50%_0%,#000_70%,transparent_110%)]"></div>
         <div className="container h-[100%] flex flex-col items-center justify-center gap-4 py-8 md:py-10 mx-auto">
           <div className="gap-2 grid grid-cols-8 w-full">
-            <div className="col-span-4 col-start-3  ">
+            <div className="col-span-8 md:col-span-4 md:col-start-3 px-8 md:px-0">
               <div className="text-center justify-center">
                 <div className="flex justify-center mb-6">
                   <Image
                     alt="turu"
-                    className="object-cover h-[120px]"
+                    className="object-cover h-[90px] md:h-[120px]"
                     radius="none"
                     src="/logo-2.png"
                     isBlurred
@@ -120,17 +120,17 @@ export default function Home() {
           <div className="absolute left-0 top-0 h-[500px] w-[500px] -translate-x-[30%] translate-y-[20%] rounded-full bg-primary opacity-20 blur-[80px]"></div>
           <div className="absolute right-0 bottom-0 h-[400px] w-[400px] translate-y-[200px] rounded-full bg-primary opacity-20 blur-[80px]"></div>
         </div>
-        <div className="max-w-6xl h-full py-8 md:py-20 mx-auto relative">
-          <div className="grid grid-cols-2">
-            <div className="max-w-3xl mb-10">
-              <p className="text-2xl font-medium"><span className="text-primary font-bold">TURU</span> NFT Marketplace</p>
-              <p className="text-1xl mb-4 text-primary">Get Exclusive NFTs & Start Earning Rewards from Your Sleep!</p>
+        <div className="px-6 md:px-0 max-w-6xl h-full py-8 md:py-20 mx-auto relative">
+          <div className="grid grid-cols-1 md:grid-cols-2">
+            <div className="max-w-3xl mb-6 md:mb-10">
+              <p className="text-2xl font-medium text-center md:text-start"><span className="text-primary font-bold">TURU</span> NFT Marketplace</p>
+              <p className="text-1xl text-primary text-center md:text-start">Get Exclusive NFTs & Start Earning Rewards from Your Sleep!</p>
             </div>
-            <div className="flex justify-end">
+            <div className="flex justify-start mb-5 md:mb-0 md:justify-end">
               <Link href="shop">See More NFT</Link>
             </div>
           </div>
-          <div className="gap-4 grid grid-cols-2 sm:grid-cols-5 w-full">
+          <div className="gap-4 grid grid-cols-1 md:grid-cols-5 w-full">
             {list.map((item, index) => (
               <Card key={index}>
                 <CardBody className="overflow-visible p-0">
@@ -159,15 +159,15 @@ export default function Home() {
       </section>
 
       <section className="relative overflow-hidden">
-        <div className="max-w-6xl h-full py-8 md:py-20 mx-auto relative">
-          <div className="grid grid-cols-12">
-            <div className="flex flex-col justify-center col-span-6">
+        <div className="px-6 md:px-0 max-w-6xl h-full py-8 md:py-20 mx-auto relative">
+          <div className="grid grid-cols-12 gap-6">
+            <div className="flex flex-col justify-center col-span-12 md:col-span-6">
               <p className="text-2xl font-medium mb-4"><span className="text-primary">Welcome to Turu</span> - Better Sleep, Better Life!</p>
               <p className="text-sm mb-4 text-slate-500">Getting enough sleep is not just a need, but an investment in your health and productivity. At Turu, we take your sleep experience to the next level with Web3 technology. Earn rewards simply by getting enough sleep and enjoy the benefits of quality rest every night!</p>
               <p className="text-sm mb-4 mt-5 font-bold text-primary">Ready to sleep better and earn rewards?</p>
               <Button color="primary" variant="shadow" className="px-10 w-fit">Join Now</Button>
             </div>
-            <div className="flex items-center col-span-5 col-start-8">
+            <div className="flex items-center col-span-12 md:col-span-5 md:col-start-8">
               <Image
                 alt="turu"
                 className="w-full"
@@ -186,7 +186,7 @@ export default function Home() {
           <div className="absolute right-0 bottom-0 h-[400px] w-[400px] translate-y-[200px] rounded-full bg-[#3F8EFC] blur-[80px]"></div>
         </div>
         <div className="absolute bottom-0 left-0 right-0 top-0 bg-[linear-gradient(to_right,rgba(255,255,255,.1)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,.1)_1px,transparent_1px)] bg-[size:24px_24px] [mask-image:radial-gradient(ellipse_80%_50%_at_50%_0%,#000_70%,transparent_110%)]"></div>
-        <div className="max-w-6xl h-full py-8 md:py-24 mx-auto relative">
+        <div className="px-6 md:px-0 max-w-6xl h-full py-8 md:py-24 mx-auto relative">
           <div className="flex justify-center">
             <div className="max-w-2xl mb-14">
               <p className="text-2xl font-medium text-center text-white">Usage of <span className="font-bold">TURU</span></p>
@@ -228,8 +228,8 @@ export default function Home() {
       <section className="relative">
         <div className="absolute bottom-0 left-0 right-0 top-0 bg-[linear-gradient(to_right,rgba(38,103,255,.05)_2px,transparent_2px),linear-gradient(to_bottom,rgba(38,103,255,.05)_2px,transparent_2px)] bg-[size:24px_24px] [mask-image:radial-gradient(ellipse_80%_50%_at_50%_0%,#000_70%,transparent_110%)]"></div>
         <div className="container h-[100%] flex flex-col items-center justify-center gap-4 py-8 md:py-20 md:pb-0 mx-auto">
-          <div className="gap-2 grid grid-cols-8 w-full">
-            <div className="col-span-4 col-start-3  ">
+          <div className="gap-2 grid grid-cols-8 w-full px-6 md:px-0">
+            <div className="col-span-8 md:col-span-4 md:col-start-3">
               <div className="text-center justify-center">
                 <p className="text-2xl font-medium mb-2 text-center">It's Time for Quality Sleep <span className="text-primary">and Earning Rewards!</span></p>
                 <div className="text-sm text-slate-500 mb-5">
@@ -250,7 +250,7 @@ export default function Home() {
                 <div className="flex justify-center mb-6">
                   <Image
                     alt="turu"
-                    className="object-cover h-[200px]"
+                    className="object-cover w-full md:w-auto md:h-[200px]"
                     radius="none"
                     src="/images/turu-cta.png"
                     isBlurred
@@ -276,7 +276,7 @@ export default function Home() {
                 <Image
                   alt={item.title}
                   isBlurred
-                  className="w-full object-contain h-[50px]"
+                  className="w-full object-contain h-[30px] md:h-[50px]"
                   src={item.img}
                   width="150px"
                 />

@@ -19,7 +19,7 @@ export default function Home() {
           <div className="absolute left-0 top-0 h-[500px] w-[500px] -translate-x-[30%] translate-y-[20%] rounded-full bg-primary opacity-20 blur-[80px]"></div>
           <div className="absolute right-0 bottom-0 h-[400px] w-[400px] translate-y-[200px] rounded-full bg-primary opacity-20 blur-[80px]"></div>
         </div>
-        <div className="max-w-6xl h-full py-8 md:py-20 mx-auto relative">
+        <div className="px-6 md:px-0 max-w-6xl h-full py-8 md:py-20 mx-auto relative">
           <div className="max-w-3xl mb-10">
             <p className="text-2xl font-medium">Frequently Asked Question (FAQ)</p>
           </div>
