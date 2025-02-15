@@ -1,6 +1,6 @@
 "use client";
 
-import { Card, CardHeader, CardBody, CardFooter, Link } from "@heroui/react";
+import { Card, CardHeader, CardBody, CardFooter, Link, Input } from "@heroui/react";
 import { Breadcrumbs, BreadcrumbItem } from "@heroui/react";
 import SleepChart from "@/components/SleepChart";
 import SleepTimelineChart from "@/components/SleepTimelineChart";
@@ -24,6 +24,63 @@ export default function Home() {
           <div className="absolute right-0 bottom-0 h-[400px] w-[400px] translate-y-[200px] rounded-full bg-primary opacity-20 blur-[80px]"></div>
         </div>
         <div className="px-6 md:px-0 max-w-6xl h-full py-8 md:py-20 mx-auto relative">
+          <div className="max-w-3xl mb-5">
+            <p className="text-2xl font-medium">Your <span className="text-primary font-bold">TURU</span> Points</p>
+            <p className="text-1xl mb-4 text-primary">Lorem, ipsum dolor sit amet consectetur adipisicing.</p>
+          </div>
+          <div className="mb-2">
+            <p className="text-xs text-slate-500 mb-2">Your Points:</p>
+            <p className="text-3xl font-bold">4000 <span className="text-primary text-sm">TURU Points</span></p>
+          </div>
+          <div className="grid grid-cols-2 gap-4 mb-10">
+            <div>
+              <Card className="w-100 h-100 shadow-none">
+                <CardHeader className="flex gap-3 pb-0">
+                  <div className="flex flex-col text-start">
+                    <p className="text-sm font-medium">Points to withdraw</p>
+                  </div>
+                </CardHeader>
+                <CardBody>
+                  <Input
+                    type="number"
+                    label="Insert amount to withdraw"
+                    placeholder="0"
+                    min={0}
+                    labelPlacement="inside"
+                    startContent={
+                      <div className="pointer-events-none flex items-center">
+                        <span className="text-default-400 text-small">Points</span>
+                      </div>
+                    }
+                  />
+                </CardBody>
+              </Card>
+            </div>
+            <div>
+              <Card className="w-100 shadow-none">
+                <CardHeader className="flex gap-3 pb-0">
+                  <div className="flex flex-col text-start">
+                    <p className="font-medium text-sm">$TRU Amount</p>
+                  </div>
+                </CardHeader>
+                <CardBody>
+                  <Input
+                    type="number"
+                    label="Amount $TRU you will get"
+                    placeholder="0"
+                    min={0}
+                    isReadOnly={true}
+                    labelPlacement="inside"
+                    startContent={
+                      <div className="pointer-events-none flex items-center">
+                        <span className="text-default-400 text-small">$TRU</span>
+                      </div>
+                    }
+                  />
+                </CardBody>
+              </Card>
+            </div>
+          </div>
           <div className="max-w-3xl mb-10">
             <p className="text-2xl font-medium">Your <span className="text-primary font-bold">TURU</span> Statistics</p>
             <p className="text-1xl mb-4 text-primary">Lorem, ipsum dolor sit amet consectetur adipisicing.</p>

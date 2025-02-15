@@ -1,57 +1,88 @@
 "use client";
 
 import { useState } from "react";
-import { Card, CardBody, CardFooter, Image, Breadcrumbs, BreadcrumbItem, Button, Select, SelectItem } from "@heroui/react";
+import { Card, CardBody, CardFooter, Image, Breadcrumbs, BreadcrumbItem, Button, Select, SelectItem, Chip } from "@heroui/react";
+import {
+  Modal,
+  ModalContent,
+  ModalHeader,
+  ModalBody,
+  ModalFooter,
+  useDisclosure,
+} from "@heroui/react";
 
 export default function Home() {
   const [sortOrder, setSortOrder] = useState("asc");
+  const modal1 = useDisclosure();
+  const modal2 = useDisclosure();
 
   const list = [
     {
       title: "Supreme Bed",
       img: "/images/nft1.jpg",
       price: 0.1,
+      type: "Common",
+      benefit: "Multiply rewards by 1.2x",
     },
     {
       title: "Supreme Pillow",
       img: "/images/nft2.jpg",
       price: 0.2,
+      type: "Rare",
+      benefit: "Multiply rewards by 1.5x",
     },
     {
       title: "Cozy Bed",
       img: "/images/nft3.jpg",
       price: 0.3,
+      type: "Epic",
+      benefit: "Multiply rewards by 2x",
     },
     {
       title: "Starry Pillow",
       img: "/images/nft4.jpg",
       price: 0.4,
+      type: "Legend",
+      benefit: "Multiply rewards by 3x",
     },
     {
       title: "Mossy Pillow",
       img: "/images/nft5.jpg",
       price: 0.5,
+      type: "Common",
+      benefit: "Multiply rewards by 1.2x",
     },
     {
       title: "Fuzzy Sleepmask",
       img: "/images/nft6.jpg",
       price: 0.1,
+      type: "Rare",
+      benefit: "Multiply rewards by 1.5x",
     },
     {
       title: "Happy Sleepmask",
       img: "/images/nft7.jpg",
       price: 0.2,
+      type: "Epic",
+      benefit: "Multiply rewards by 2x",
     },
     {
       title: "Soft Sleepmask",
       img: "/images/nft8.jpg",
       price: 0.3,
+      type: "Legend",
+      benefit: "Multiply rewards by 3x",
     },
   ];
 
   const sortedList = [...list].sort((a, b) =>
     sortOrder === "asc" ? a.price - b.price : b.price - a.price
   );
+
+  const handleSuccess = () => {
+    modal1.onClose();
+    modal2.onOpen();
+  };
 
   return (
     <div>
@@ -85,7 +116,7 @@ export default function Home() {
           <div className="gap-4 grid grid-cols-1 md:grid-cols-5 w-full">
             {sortedList.map((item, index) => (
               <Card key={index}>
-                <CardBody className="overflow-visible p-0">
+                <CardBody className="overflow-visible p-0 relative">
                   <Image
                     alt={item.title}
                     className="w-full object-cover"
@@ -94,13 +125,39 @@ export default function Home() {
                     src={item.img}
                     width="100%"
                   />
+                  {
+                    item.type == "Common" && <Chip size="sm" className="mb-2 absolute top-2 left-2 z-10 px-4">Common</Chip>
+                  }
+                  {
+                    item.type == "Rare" && <Chip size="sm" color="primary" className="mb-2 absolute top-2 left-2 z-10 px-4">Rare</Chip>
+                  }
+                  {
+                    item.type == "Epic" && <Chip size="sm" color="secondary" className="mb-2 absolute top-2 left-2 z-10 px-4">Epic</Chip>
+                  }
+                  {
+                    item.type == "Legend" && <Chip size="sm" color="danger" className="mb-2 absolute top-2 left-2 z-10 px-4">Legend</Chip>
+                  }
                 </CardBody>
-                <CardFooter className="text-small flex-col">
-                  <div className="flex justify-between mb-2 w-full">
+                <CardFooter className="text-small flex-col items-start">
+                  <div className="flex justify-between w-full">
                     <b>{item.title}</b>
                     <p className="text-default-500">{item.price}ETH</p>
                   </div>
-                  <Button color="primary" variant="shadow" size="sm" fullWidth>
+                  <div className="flex justify-between mb-2 w-full">
+                    {
+                      item.type == "Common" && <p className="text-xs text-default-500">{item.benefit}</p>
+                    }
+                    {
+                      item.type == "Rare" && <p className="text-xs text-primary">{item.benefit}</p>
+                    }
+                    {
+                      item.type == "Epic" && <p className="text-xs text-secondary">{item.benefit}</p>
+                    }
+                    {
+                      item.type == "Legend" && <p className="text-xs text-danger">{item.benefit}</p>
+                    }
+                  </div>
+                  <Button color="primary" variant="shadow" size="sm" fullWidth onPress={modal1.onOpen}>
                     Buy NFT
                   </Button>
                 </CardFooter>
@@ -108,7 +165,49 @@ export default function Home() {
             ))}
           </div>
         </div>
-      </section>
-    </div>
+      </section >
+
+      <Modal backdrop="blur" isOpen={modal1.isOpen} onOpenChange={modal1.onOpenChange}>
+        <ModalContent>
+          {(onClose) => (
+            <>
+              <ModalHeader className="flex flex-col gap-1">Confirm Your Purchase</ModalHeader>
+              <ModalBody>
+                <p>Are you sure you want to purchase this NFT? Once confirmed, the transaction will be processed, and the NFT will be added to your wallet.</p>
+              </ModalBody>
+              <ModalFooter>
+                <Button color="danger" variant="light" onPress={onClose}>
+                  Cancel
+                </Button>
+                <Button color="primary" onPress={handleSuccess}>
+                  Confirm Purchase
+                </Button>
+              </ModalFooter>
+            </>
+          )}
+        </ModalContent>
+      </Modal>
+
+      <Modal backdrop="blur" isOpen={modal2.isOpen} onOpenChange={modal2.onOpenChange}>
+        <ModalContent>
+          {(onClose2) => (
+            <>
+              <ModalHeader className="flex flex-col gap-1">NFT Purchase Successful!</ModalHeader>
+              <ModalBody>
+                <p>Congratulations! You have successfully purchased [NFT Name]. Your NFT has been added to your wallet, and you can now start earning rewards while you sleep.</p>
+              </ModalBody>
+              <ModalFooter>
+                <Button color="danger" variant="light" onPress={onClose2}>
+                  Close
+                </Button>
+                <Button color="primary" onPress={onClose2}>
+                  View My NFTs
+                </Button>
+              </ModalFooter>
+            </>
+          )}
+        </ModalContent>
+      </Modal>
+    </div >
   );
 }
