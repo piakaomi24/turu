@@ -1,58 +1,57 @@
 "use client";
 
-import { Link } from "@heroui/link";
-import { button as buttonStyles } from "@heroui/theme";
-import { Card, CardBody, CardFooter, Image } from "@heroui/react";
-import { Breadcrumbs, BreadcrumbItem } from "@heroui/react";
-import {Button} from "@heroui/react";
-
-import { siteConfig } from "@/config/site";
-import { title, subtitle } from "@/components/primitives";
-import { GithubIcon } from "@/components/icons";
+import { useState } from "react";
+import { Card, CardBody, CardFooter, Image, Breadcrumbs, BreadcrumbItem, Button, Select, SelectItem } from "@heroui/react";
 
 export default function Home() {
+  const [sortOrder, setSortOrder] = useState("asc");
+
   const list = [
     {
       title: "Supreme Bed",
       img: "/images/nft1.jpg",
-      price: "0.1 ETH",
+      price: 0.1,
     },
     {
       title: "Supreme Pillow",
       img: "/images/nft2.jpg",
-      price: "0.2 ETH",
+      price: 0.2,
     },
     {
       title: "Cozy Bed",
       img: "/images/nft3.jpg",
-      price: "0.3 ETH",
+      price: 0.3,
     },
     {
       title: "Starry Pillow",
       img: "/images/nft4.jpg",
-      price: "0.4 ETH",
+      price: 0.4,
     },
     {
       title: "Mossy Pillow",
       img: "/images/nft5.jpg",
-      price: "0.5 ETH",
+      price: 0.5,
     },
     {
       title: "Fuzzy Sleepmask",
       img: "/images/nft6.jpg",
-      price: "0.1 ETH",
+      price: 0.1,
     },
     {
       title: "Happy Sleepmask",
       img: "/images/nft7.jpg",
-      price: "0.2 ETH",
+      price: 0.2,
     },
     {
       title: "Soft Sleepmask",
       img: "/images/nft8.jpg",
-      price: "0.3 ETH",
+      price: 0.3,
     },
   ];
+
+  const sortedList = [...list].sort((a, b) =>
+    sortOrder === "asc" ? a.price - b.price : b.price - a.price
+  );
 
   return (
     <div>
@@ -75,9 +74,16 @@ export default function Home() {
             <p className="text-1xl mb-4 text-primary">Get Exclusive NFTs & Start Earning Rewards from Your Sleep!</p>
             <p className="text-slate-500 text-sm">Welcome to the official Turu marketplace! Here, you can purchase NFTs that will grant access to exclusive features and sleep-quality-based rewards. Choose an NFT that fits your sleep style and start your journey towards healthier and more productive sleep!</p>
           </div>
+          <div className="mb-4 flex">
+            <div className="w-full md:max-w-sm">
+              <Select defaultSelectedKeys={["asc"]} onChange={(e) => setSortOrder(e.target.value)} placeholder="Sort by">
+                <SelectItem key="asc">Sort by Price: Low to High</SelectItem>
+                <SelectItem key="desc">Sort by Price: High to Low</SelectItem>
+              </Select>
+            </div>
+          </div>
           <div className="gap-4 grid grid-cols-1 md:grid-cols-5 w-full">
-            {list.map((item, index) => (
-              /* eslint-disable no-console */
+            {sortedList.map((item, index) => (
               <Card key={index}>
                 <CardBody className="overflow-visible p-0">
                   <Image
@@ -92,7 +98,7 @@ export default function Home() {
                 <CardFooter className="text-small flex-col">
                   <div className="flex justify-between mb-2 w-full">
                     <b>{item.title}</b>
-                    <p className="text-default-500">{item.price}</p>
+                    <p className="text-default-500">{item.price}ETH</p>
                   </div>
                   <Button color="primary" variant="shadow" size="sm" fullWidth>
                     Buy NFT
