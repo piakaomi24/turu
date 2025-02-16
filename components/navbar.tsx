@@ -12,7 +12,7 @@ import {
 import { Link } from "@heroui/link";
 import { link as linkStyles } from "@heroui/theme";
 import NextLink from "next/link";
-import { Image, Button } from "@heroui/react";
+import { Image, Button, Tooltip } from "@heroui/react";
 import clsx from "clsx";
 
 import { ConnectButton } from '@rainbow-me/rainbowkit';
@@ -59,17 +59,35 @@ export const Navbar = () => {
         justify="end"
       >
         <NavbarItem className="hidden md:flex">
-          <Button
-            as={Link}
-            className="text-sm font-normal"
-            href="#"
-            isDisabled={!isConnected}
-            className="me-2"
-            variant="shadow"
-            color="primary"
-          >
-            Connect Smartwatch
-          </Button>
+          {!isConnected && <Tooltip color="danger" content="You must connect wallet first">
+            <div>
+              <Button
+                as={Link}
+                className="text-sm font-normal"
+                href="#"
+                isDisabled={!isConnected}
+                className="me-2"
+                variant="shadow"
+                color="primary"
+              >
+                Connect Smartwatch
+              </Button>
+            </div>
+          </Tooltip>
+          }
+          {
+            isConnected && <Button
+              as={Link}
+              className="text-sm font-normal"
+              href="#"
+              isDisabled={!isConnected}
+              className="me-2"
+              variant="shadow"
+              color="primary"
+            >
+              Connect Smartwatch
+            </Button>
+          }
           <ConnectButton accountStatus="avatar" />
         </NavbarItem>
       </NavbarContent>
