@@ -12,14 +12,17 @@ import {
 import { Link } from "@heroui/link";
 import { link as linkStyles } from "@heroui/theme";
 import NextLink from "next/link";
-import { Image } from "@heroui/react";
+import { Image, Button } from "@heroui/react";
 import clsx from "clsx";
 
 import { ConnectButton } from '@rainbow-me/rainbowkit';
+import { useAccount } from "wagmi";
 
 import { siteConfig } from "@/config/site";
 
 export const Navbar = () => {
+  const { isConnected, address } = useAccount();
+
   return (
     <HeroUINavbar maxWidth="xl" position="sticky">
       <NavbarContent className="basis-1/5 sm:basis-full" justify="start">
@@ -56,7 +59,18 @@ export const Navbar = () => {
         justify="end"
       >
         <NavbarItem className="hidden md:flex">
-          <ConnectButton />
+          <Button
+            as={Link}
+            className="text-sm font-normal"
+            href="#"
+            isDisabled={!isConnected}
+            className="me-2"
+            variant="shadow"
+            color="primary"
+          >
+            Connect Smartwatch
+          </Button>
+          <ConnectButton accountStatus="avatar" />
         </NavbarItem>
       </NavbarContent>
 

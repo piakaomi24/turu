@@ -12,6 +12,7 @@ import '@rainbow-me/rainbowkit/styles.css';
 import {
   getDefaultConfig,
   RainbowKitProvider,
+  lightTheme
 } from '@rainbow-me/rainbowkit';
 import { WagmiProvider } from 'wagmi';
 import {
@@ -54,7 +55,11 @@ export function Providers({ children, themeProps }: ProvidersProps) {
   return (
     <WagmiProvider config={config}>
       <QueryClientProvider client={queryClient}>
-        <RainbowKitProvider>
+        <RainbowKitProvider
+          coolMode
+          theme={lightTheme({
+            overlayBlur: 'small',
+          })}>
           <HeroUIProvider navigate={router.push}>
             <NextThemesProvider {...themeProps}>{children}</NextThemesProvider>
           </HeroUIProvider>

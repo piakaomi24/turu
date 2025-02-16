@@ -1,6 +1,7 @@
 "use client";
 
-import { Card, CardHeader, CardBody, CardFooter, Link, Input } from "@heroui/react";
+import { useState } from "react";
+import { Card, CardHeader, CardBody, CardFooter, Link, Input, Button, Divider } from "@heroui/react";
 import { Breadcrumbs, BreadcrumbItem } from "@heroui/react";
 import SleepChart from "@/components/SleepChart";
 import SleepTimelineChart from "@/components/SleepTimelineChart";
@@ -8,6 +9,28 @@ import HRVChart from "@/components/HRVChart";
 import RHRChart from "@/components/RHRChart";
 
 export default function Home() {
+  const [inputA, setInputA] = useState("");
+  const [inputB, setInputB] = useState("");
+  const [isSubmitDisabled, setIsSubmitDisabled] = useState<boolean>(true);
+  const [isOnProcess, setIsOnProcess] = useState<boolean>(false);
+
+  const handleInputAChange = (e) => {
+    const value = e.target.value;
+    if (/^\d*\.?\d*$/.test(value)) {
+      setInputA(value);
+      setInputB(value ? (parseFloat(value) * 10 / 100).toFixed(0) : "");
+      if (parseFloat((parseFloat(value) * 10 / 100).toFixed(0)) > 0) {
+        setIsSubmitDisabled(false);
+      } else {
+        setIsSubmitDisabled(true);
+      }
+    }
+  };
+
+  const handleSubmit = () => {
+    setIsOnProcess(true);
+  };
+
   return (
     <div>
       <section className="bg-slate-100">
@@ -46,6 +69,8 @@ export default function Home() {
                     label="Insert amount to withdraw"
                     placeholder="0"
                     min={0}
+                    value={inputA}
+                    onChange={handleInputAChange}
                     labelPlacement="inside"
                     startContent={
                       <div className="pointer-events-none flex items-center">
@@ -71,6 +96,7 @@ export default function Home() {
                     min={0}
                     isReadOnly={true}
                     labelPlacement="inside"
+                    value={inputB}
                     startContent={
                       <div className="pointer-events-none flex items-center">
                         <span className="text-default-400 text-small">$TRU</span>
@@ -79,6 +105,43 @@ export default function Home() {
                   />
                 </CardBody>
               </Card>
+            </div>
+            <div>
+              <Button
+                onPress={handleSubmit}
+                isDisabled={isSubmitDisabled || isOnProcess}
+                fullWidth
+                size="md"
+                color="primary"
+                variant="shadow">
+                Swap
+              </Button>
+              <div
+                hidden={!isOnProcess}>
+                <Card className="w-100 shadow-none mt-4">
+                  <CardHeader className="flex gap-3">
+                    <div className="flex flex-col text-start w-full">
+                      <p className="text-md">Action</p>
+                    </div>
+                  </CardHeader>
+                  <CardBody>
+                    <div className="bg-content2 p-3 rounded-lg flex flex-col gap-3">
+                      <div className="flex gap-4 items-center">
+                        <div className="p-2 bg-content1 rounded-md px-4 font-bold text-sm">1</div>
+                        <p className="mb-0 text-sm min-w-32">Claim $TRU</p>
+                        <p className="mb-0 text-sm font-bold">{inputB} <span className="opacity-50">$TRU</span></p>
+                        <Button
+                          className="ms-auto min-w-24"
+                          size="sm"
+                          color="primary"
+                          variant="shadow">
+                          Claim
+                        </Button>
+                      </div>
+                    </div>
+                  </CardBody>
+                </Card>
+              </div>
             </div>
           </div>
           <div className="max-w-3xl mb-10">
