@@ -2,7 +2,9 @@
 
 import { Link } from "@heroui/link";
 import { button as buttonStyles } from "@heroui/theme";
-import { Card, CardHeader, CardBody, CardFooter, Image, Button, Alert } from "@heroui/react";
+import { Image } from "@heroui/image";
+import { Button } from "@heroui/button";
+import { Card, CardHeader, CardBody, CardFooter } from "@heroui/card";
 
 export default function Home() {
   const list = [
@@ -231,7 +233,7 @@ export default function Home() {
           <div className="gap-2 grid grid-cols-8 w-full px-6 md:px-0">
             <div className="col-span-8 md:col-span-4 md:col-start-3">
               <div className="text-center justify-center">
-                <p className="text-2xl font-medium mb-2 text-center">It's Time for Quality Sleep <span className="text-primary">and Earning Rewards!</span></p>
+                <p className="text-2xl font-medium mb-2 text-center">It&apos;s Time for Quality Sleep <span className="text-primary">and Earning Rewards!</span></p>
                 <div className="text-sm text-slate-500 mb-5">
                   Take the first step towards better sleep and earn rewards with every restful night!
                 </div>

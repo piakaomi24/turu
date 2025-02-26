@@ -1,12 +1,15 @@
 "use client";
 
 import { useState } from "react";
-import { Card, CardHeader, CardBody, CardFooter, Link, Input, Button, Divider } from "@heroui/react";
-import { Breadcrumbs, BreadcrumbItem } from "@heroui/react";
+import { Button } from "@heroui/button";
+import { Card, CardHeader, CardBody, CardFooter } from "@heroui/card";
+import { Breadcrumbs, BreadcrumbItem } from "@heroui/breadcrumbs";
 import SleepChart from "@/components/SleepChart";
 import SleepTimelineChart from "@/components/SleepTimelineChart";
 import HRVChart from "@/components/HRVChart";
 import RHRChart from "@/components/RHRChart";
+import {Input} from "@heroui/input";
+import {Link} from "@heroui/link";
 
 export default function Home() {
   const [inputA, setInputA] = useState("");
@@ -14,7 +17,7 @@ export default function Home() {
   const [isSubmitDisabled, setIsSubmitDisabled] = useState<boolean>(true);
   const [isOnProcess, setIsOnProcess] = useState<boolean>(false);
 
-  const handleInputAChange = (e) => {
+  const handleInputAChange = (e: { target: { value: any; }; }) => {
     const value = e.target.value;
     if (/^\d*\.?\d*$/.test(value)) {
       setInputA(value);

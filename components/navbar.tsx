@@ -12,7 +12,9 @@ import {
 import { Link } from "@heroui/link";
 import { link as linkStyles } from "@heroui/theme";
 import NextLink from "next/link";
-import { Image, Button, Tooltip } from "@heroui/react";
+import { Button } from "@heroui/button";
+import { Image } from "@heroui/image";
+import { Tooltip } from "@heroui/tooltip";
 import clsx from "clsx";
 
 import { ConnectButton } from '@rainbow-me/rainbowkit';
@@ -63,10 +65,9 @@ export const Navbar = () => {
             <div>
               <Button
                 as={Link}
-                className="text-sm font-normal"
+                className="text-sm font-normal me-2"
                 href="#"
                 isDisabled={!isConnected}
-                className="me-2"
                 variant="shadow"
                 color="primary"
               >
@@ -78,10 +79,9 @@ export const Navbar = () => {
           {
             isConnected && <Button
               as={Link}
-              className="text-sm font-normal"
+              className="text-sm font-normal me-2"
               href="#"
               isDisabled={!isConnected}
-              className="me-2"
               variant="shadow"
               color="primary"
             >

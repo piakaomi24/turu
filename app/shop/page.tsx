@@ -1,15 +1,13 @@
 "use client";
 
 import { useState } from "react";
-import { Card, CardBody, CardFooter, Image, Breadcrumbs, BreadcrumbItem, Button, Select, SelectItem, Chip } from "@heroui/react";
-import {
-  Modal,
-  ModalContent,
-  ModalHeader,
-  ModalBody,
-  ModalFooter,
-  useDisclosure,
-} from "@heroui/react";
+import { Chip } from "@heroui/chip";
+import { Select, SelectItem } from "@heroui/select";
+import { Image } from "@heroui/image";
+import { Button } from "@heroui/button";
+import { Breadcrumbs, BreadcrumbItem } from "@heroui/breadcrumbs";
+import { Card, CardBody, CardFooter } from "@heroui/card";
+import { Modal, ModalContent, ModalHeader, ModalBody, ModalFooter, useDisclosure } from "@heroui/modal";
 
 export default function Home() {
   const [sortOrder, setSortOrder] = useState("asc");

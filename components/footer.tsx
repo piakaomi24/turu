@@ -1,6 +1,6 @@
 "use client";
 
-import { Image } from "@heroui/react";
+import { Image } from "@heroui/image";
 import { Link } from "@heroui/link";
 
 export const Footer = () => {

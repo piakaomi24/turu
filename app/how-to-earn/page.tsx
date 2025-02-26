@@ -1,6 +1,6 @@
 "use client";
 
-import { Breadcrumbs, BreadcrumbItem } from "@heroui/react";
+import {Breadcrumbs, BreadcrumbItem} from "@heroui/breadcrumbs";
 
 export default function Home() {
   return (
