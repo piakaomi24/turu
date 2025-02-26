@@ -1,7 +1,10 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-    webpack: (config, { isServer }) => {
-        // Menambahkan atau mengubah konfigurasi Webpack agar lebih fleksibel
+    experimental: {
+        esmExternals: 'loose',
+    },
+    webpack: (config) => {
+        config.externals.push('pino-pretty', 'lokijs', 'encoding');
         return config;
     },
     eslint: {

@@ -3,9 +3,10 @@
 import { color } from "framer-motion";
 import React from "react";
 import Chart from "react-apexcharts";
+import { ApexOptions } from "apexcharts";
 
 const SleepTimelineChart = () => {
-    const options = {
+    const options: ApexOptions = {
         chart: {
             type: 'bar',
             stacked: true,
@@ -35,6 +36,36 @@ const SleepTimelineChart = () => {
 
         }
     };
+    // const options = {
+    //     chart: {
+    //         type: 'bar',
+    //         stacked: true,
+    //         stackType: '100%'
+    //     },
+    //     plotOptions: {
+    //         bar: {
+    //             horizontal: true,
+    //         },
+    //     },
+    //     stroke: {
+    //         width: 1,
+    //         colors: ['#fff']
+    //     },
+    //     xaxis: {
+    //         categories: ['Minutes'],
+    //     },
+    //     tooltip: {
+    //         y: {
+    //             formatter: function (val) {
+    //                 return val + " Minutes"
+    //             }
+    //         }
+    //     },
+    //     fill: {
+    //         opacity: 1
+
+    //     }
+    // };
 
     const series = [{
         name: 'Light Sleep: 22:00 - 23:30',

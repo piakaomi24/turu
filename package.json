@@ -20,6 +20,7 @@
   "@heroui/modal": "^2.2.11",
   "@heroui/navbar": "^2.2.12",
   "@heroui/select": "^2.4.13",
+  "@heroui/switch": "^2.2.12",
   "@heroui/system": "^2.4.10",
   "@heroui/theme": "^2.4.9",
   "@heroui/tooltip": "^2.2.11",

@@ -2,9 +2,10 @@
 
 import React from "react";
 import Chart from "react-apexcharts";
+import { ApexOptions } from "apexcharts";
 
 const RHRChart = () => {
-    const options = {
+    const options: ApexOptions = {
         chart: {
             type: "area",
             zoom: {

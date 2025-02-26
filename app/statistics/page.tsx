@@ -1,15 +1,25 @@
 "use client";
 
+import dynamic from 'next/dynamic';
 import { useState } from "react";
 import { Button } from "@heroui/button";
 import { Card, CardHeader, CardBody, CardFooter } from "@heroui/card";
 import { Breadcrumbs, BreadcrumbItem } from "@heroui/breadcrumbs";
-import SleepChart from "@/components/SleepChart";
-import SleepTimelineChart from "@/components/SleepTimelineChart";
-import HRVChart from "@/components/HRVChart";
-import RHRChart from "@/components/RHRChart";
 import {Input} from "@heroui/input";
 import {Link} from "@heroui/link";
+
+const SleepChart = dynamic(() => import('../../components/SleepChart'), {
+  ssr: false,
+});
+const SleepTimelineChart = dynamic(() => import('../../components/SleepTimelineChart'), {
+  ssr: false,
+});
+const HRVChart = dynamic(() => import('../../components/HRVChart'), {
+  ssr: false,
+});
+const RHRChart = dynamic(() => import('../../components/RHRChart'), {
+  ssr: false,
+});
 
 export default function Home() {
   const [inputA, setInputA] = useState("");
@@ -116,7 +126,8 @@ export default function Home() {
                 fullWidth
                 size="md"
                 color="primary"
-                variant="shadow">
+                variant="shadow"
+                aria-label="Swap">
                 Swap
               </Button>
               <div
